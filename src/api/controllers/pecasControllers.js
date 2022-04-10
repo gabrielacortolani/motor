@@ -49,7 +49,7 @@ module.exports = {
         await Pecas.update({
             pec_nome, pec_fabricante, pec_descricao,pec_datafab 
         }, {
-            where: { id: pecas }
+            where: { id: pecas_id }
         });
 
         return res.status(200).send({
