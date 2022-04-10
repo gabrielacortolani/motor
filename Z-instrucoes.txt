@@ -1,0 +1,11 @@
+--criar o projeto - package.json
+npm init -y
+
+-- express
+npm install express --save
+
+npm install -g nodemon # or using yarn: yarn global add nodemon
+
+npm install --save-dev nodemon # or using yarn: yarn add nodemon -D
+npm install --save mysql2
+
