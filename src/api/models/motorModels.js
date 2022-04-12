@@ -15,7 +15,7 @@ class Motor extends Model {
     }
 
     static associate(models) {
-        this.hasMany(models.Pecas, {foreignKey: "motor_id", as: 'motor' })
+        this.hasMany(models.Pecas, {foreignKey: "motor_id", as: 'pecas' })
     }
 }
  

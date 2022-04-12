@@ -1,4 +1,5 @@
-const Motor = require('../models/motorModels.js')
+const Motor = require('../models/motorModels.js');
+const Pecas = require('../models/pecasModels.js');
 
 module.exports = {
     async indexAll(req, res) {
@@ -9,9 +10,11 @@ module.exports = {
     async index(req,res) {
         const { motor_id } = req.params
         console.log('Parametro motor esperado' + motor_id)
-
-        const motor = await Motor.findByPk(motor_id)
-        return res.json(motor)
+        const motor = await Motor.findByPk(motor_id, {
+            include: { association: 'pecas'}
+        })
+        
+        return res.json(motor);
     },
 
     async store(req, res) {
